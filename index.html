@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Cloudinary Background Images</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header id="js-cover" class="cover">
+      <!-- Optionally specify image width stoppoints to reduce the maximum possible no of transforms per image -->
+      <!-- The appropriate image resolution will automatically be loaded -->
+      <img
+        data-stoppoints="480,768,1200"
+        data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_fit,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg"
+        class="cld-responsive cover-img"
+        id="js-cover-img"
+      />
+
+      <h1>Perfectly centered!</h1>
+    </header>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="/_assets/js/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <!-- Cloudinary -->
+    <script src="https://rawgit.com/cloudinary/cloudinary_js/master/js/jquery.cloudinary.js"></script>
+
+    <script>
+      $(function() {
+        $.cloudinary.config({
+          cloud_name: "damnzwekj"
+        });
+
+        $.cloudinary.responsive({
+          responsive_use_stoppoints: true
+        });
+
+        $("#js-cover-img").load(function() {
+          $("#js-cover").css(
+            "backgroundImage",
+            "url(" + $("#js-cover-img").attr("src") + ")"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.cover {
+  min-height: 300px;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  background-attachment:scroll;
+  overflow: hidden;
+}
+
+/* you could alternatively use a loading sprite here and hide on first load */
+.cover-img {
+  display: none;
+}
