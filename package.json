@@ -1,5 +1,26 @@
 {
   "devDependencies": {
-    "cssnano": "^4.1.10"
-  }
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4"
+  },
+  "name": "cloudinary-responsive-bg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwiftWinds/cloudinary-responsive-bg.git"
+  },
+  "keywords": [],
+  "author": "SwiftWinds",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SwiftWinds/cloudinary-responsive-bg/issues"
+  },
+  "homepage": "https://github.com/SwiftWinds/cloudinary-responsive-bg#readme",
+  "description": "An example of responsive CSS background images with Cloudinary"
 }
